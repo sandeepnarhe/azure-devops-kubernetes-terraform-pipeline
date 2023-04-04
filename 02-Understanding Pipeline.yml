@@ -15,7 +15,7 @@ stages:
     environment: QA
   jobs:    
   - job: 'Build_Stage_Job1'    
-    displayName: 'Env $(qa)'
+    displayName: 'Env $(environment)'
     steps:
     - script: echo "stage1, job1, step1  For App $(appname) for Env $(environment)"
     - script: echo "stage1, job1, step2"
