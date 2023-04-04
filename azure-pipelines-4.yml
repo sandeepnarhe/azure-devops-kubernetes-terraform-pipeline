@@ -10,15 +10,25 @@ pool:
   vmImage: default
 
 stages:
-  - stage: DevStage
-    jobs:
-    - deployment: Dev Deploy Job
-      environment: Develop
+- stage: DevStage
+  jobs:
+  - deployment: Dev Deploy Job
+    environment: Develop
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+            - script: echo "Deploying on DEV"
 
-  - stage: QAStage
-    jobs:
-    - deployment: QA Deploy Job
-      environment: QA
+- stage: QAStage
+  jobs:
+  - deployment: QA Deploy Job
+    environment: QA
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+            - script: echo "Deploying on QA"
 
 
 
