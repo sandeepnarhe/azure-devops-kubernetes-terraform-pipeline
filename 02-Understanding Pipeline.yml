@@ -13,11 +13,11 @@ stages:
 - stage : Build
 
   jobs:
-  - job: Job1
+  - job: 'Build_Stage_Job1'
     steps:
     - script: echo "stage1, job1, step1"
     - script: echo "stage1, job1, step2"
-  - job: Job2
+  - job: 'Build_Stage_Job2'
     steps:
     - script: echo "stage1, job2, step1"
     - script: echo "stage1, job2, step2"
@@ -25,7 +25,7 @@ stages:
 - stage : Test
 
   jobs:
-  - job: Job1
+  - job: 'Test_Stage_Job1'
     steps:
     - script: echo "stage Test, job1, step1"    
   
