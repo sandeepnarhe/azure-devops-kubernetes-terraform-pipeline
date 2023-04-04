@@ -15,17 +15,17 @@ stages:
   jobs:
   - job: Job1
     steps:
-    - bash: echo "stage1, job1, step1"
-    - bash: echo "stage1, job1, step2"
+    - script: echo "stage1, job1, step1"
+    - script: echo "stage1, job1, step2"
   - job: Job2
     steps:
-    - bash: echo "stage1, job2, step1"
-    - bash: echo "stage1, job2, step2"
+    - script: echo "stage1, job2, step1"
+    - script: echo "stage1, job2, step2"
 
 - stage : Test
 
   jobs:
   - job: Job1
     steps:
-    - bash: echo "stage Test, job1, step1"    
+    - script: echo "stage Test, job1, step1"    
   
