@@ -16,10 +16,10 @@ stages:
   jobs:    
   - job: 'Build_Stage_Job1'        
     steps:
-    - script: ls -R $(System.DefaultWorkingDirectory)
+    - script: Dir $(System.DefaultWorkingDirectory)
     - task: CopyFiles@2
       inputs:
         SourceFolder: '$(System.DefaultWorkingDirectory)'
         Contents: '**'
         TargetFolder: '$(Build.ArtifactStagingDirectory)'
-    - script: ls -R $(Build.ArtifactStagingDirectory)
+    - script: Dir $(Build.ArtifactStagingDirectory)
