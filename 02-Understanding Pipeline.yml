@@ -28,4 +28,11 @@ stages:
   - job: 'Test_Stage_Job1'
     steps:
     - script: echo "stage Test, job1, step1"    
-  
+
+
+- stage : UAT
+  dependsOn: Test
+  jobs:
+  - job: 'UAT_Stage_Job1'
+    steps:
+    - script: echo "UAT Test, job1, step1"     
