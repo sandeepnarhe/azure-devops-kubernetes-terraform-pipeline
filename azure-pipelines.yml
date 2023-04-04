@@ -13,14 +13,14 @@ jobs:
 
 - job: Job1
   steps:
-  - script: Step 1
+  - script: echo 'Job1 Step 1'
     displayName: 'Step 1'
-  - script: Step 2
+  - script: echo 'Job1 Step 2'
     displayName: 'Step 2'
 
 - job: Job2
   steps:
-  - script: Step 1
+  - script: echo 'Job2 Step 1'
     displayName: 'Step 1'
-  - script: Step 2
+  - script: echo 'Job2 Step 2'
     displayName: 'Step 2'
