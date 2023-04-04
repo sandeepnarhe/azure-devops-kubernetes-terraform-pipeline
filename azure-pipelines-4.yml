@@ -12,7 +12,7 @@ pool:
 stages:
 - stage: DevStage
   jobs:
-  - deployment: Dev Deploy Job
+  - deployment: DevDeployJob
     environment: Develop
     strategy:
       runOnce:
@@ -22,7 +22,7 @@ stages:
 
 - stage: QAStage
   jobs:
-  - deployment: QA Deploy Job
+  - deployment: QADeployJob
     environment: QA
     strategy:
       runOnce:
