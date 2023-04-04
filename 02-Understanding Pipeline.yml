@@ -23,7 +23,7 @@ stages:
     - script: echo "stage1, job2, step2"
 
 - stage : Test
-
+  dependsOn: Build
   jobs:
   - job: 'Test_Stage_Job1'
     steps:
@@ -31,7 +31,7 @@ stages:
 
 
 - stage : UAT
-  dependsOn: Test
+  dependsOn: Build
   jobs:
   - job: 'UAT_Stage_Job1'
     steps:
